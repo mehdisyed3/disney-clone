@@ -1,16 +1,16 @@
 import { notFound } from "next/navigation";
 
 type Props = {
-  params : {
-    id : string;
+  params: {
+    id: string;
   },
-  searchParams : {
-    genre : string;
+  searchParams: {
+    genre: string;
   }
 }
 
-function GenrePage({params : {id}, searchParams : {genre}} : Props) {
-  if(!id) notFound()
+function GenrePage({ params: { id }, searchParams: { genre } }: Props) {
+  if (!id) notFound()
 
   const decodedSearchParams = decodeURI(genre)
   return (
