@@ -1,25 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { ThemeToggle } from './ThemeToggler'
 
 function Header() {
   return (
-    <header >
-      <Link href='/'>
+    <header className="fixed w-full z-20 top-0 flex items-center justify-between p-5 bg-gradient-to-t from-gray-200/0 via-gray-900/25 to-gray-900">
+      <Link href="/" className="mr-10">
         <Image
-        width={120}
-        height={100}
-         src='https://links.papareact.com/a943ae'
-         alt='Logo'
-         className='cursor-pointer invert'
-         />
+          src="https://links.papareact.com/a943ae"
+          width={120}
+          height={100}
+          alt="Disney Logo"
+          className={"cursor-pointer invert"}
+        />
       </Link>
 
-      <div className='flex space-x-2 '>
-
+      <div className="flex space-x-2">
+        {/* <GenreDropdown />
+        <SearchInput /> */}
+        <ThemeToggle />
       </div>
-
     </header>
+
+  
   )
 }
 
