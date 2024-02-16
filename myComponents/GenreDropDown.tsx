@@ -1,4 +1,16 @@
+
 import { Genres } from "@/typings"
+import { ChevronDown } from "lucide-react"
+import Link from "next/link"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
 
 
 async function GenreDropDown() {
@@ -19,11 +31,22 @@ async function GenreDropDown() {
 
  const data = await response.json() as Genres
 
- console.log('>>> << data', data.genres)
- 
-
   return (
-    <div>GenreDropDown</div>
+    <DropdownMenu>
+  <DropdownMenuTrigger className='flex justify-center'>Genres <ChevronDown className="ml-"/> </DropdownMenuTrigger>
+  
+  <DropdownMenuContent>
+    <DropdownMenuLabel>
+      Select a Genre
+    </DropdownMenuLabel>
+    <DropdownMenuSeparator />
+  {data.genres.map((item: any, index: number) => (
+        <DropdownMenuItem key={index}><Link href={`/genre/${item.id}?genre=${item.name}`}>{item.name}</Link></DropdownMenuItem>
+      ))}
+    
+  </DropdownMenuContent>
+</DropdownMenu>
+
   )
 }
 

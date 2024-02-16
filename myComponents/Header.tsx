@@ -20,7 +20,7 @@ function Header() {
     </Link>
   </div>
 
-  <div className=" flex ml-auto space-x-2"> {/* Container for right side */}
+  <div className=" flex  flex-col ml-auto space-x-2"> {/* Container for right side */}
   <GenreDropDown />
     <SearchInput />
     <ThemeToggle />
