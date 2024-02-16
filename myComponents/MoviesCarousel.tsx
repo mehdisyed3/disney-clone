@@ -12,11 +12,11 @@ function MoviesCarousel({title, movies, isVertical} : Props) {
   return (
     <div className="z-50">
       <h2>{title}</h2>
-      {/* {
-        movies.map((item:Movie) => (
+      {
+       movies && movies.map((item:Movie) => (
           <MovieCard key={item.id} movie={item} />
         ))
-      } */}
+      }
     </div>
   )
 }
