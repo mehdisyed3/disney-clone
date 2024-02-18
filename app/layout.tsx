@@ -15,7 +15,8 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+ {
   return (
     <html lang="en">
       <body className='bg-white dark:bg-[#1A1C29]'>
