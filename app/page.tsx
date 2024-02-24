@@ -1,5 +1,6 @@
 import MoviesCarousel from "@/myComponents/MoviesCarousel";
 import { getUpcomingMovies, getTopRatedMovies, getPopularMovies } from "@/functions/getMovies";
+import CarouselBannerWrapper from "@/myComponents/CarouselBannerWrapper";
 
 export default async function Home() {
 
@@ -9,7 +10,7 @@ export default async function Home() {
 
   return (
     <main>
-      <h1 className=""> Let's build disney</h1>
+      <CarouselBannerWrapper />
 
     <div>
       <MoviesCarousel 
