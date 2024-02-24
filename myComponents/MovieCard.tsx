@@ -19,7 +19,7 @@ function MovieCard({ movie }: { movie: Movie }) {
         key={movie.id}
       />
     </div>
-  )
+  );
 }
 
-export default MovieCard
+export default MovieCard;
