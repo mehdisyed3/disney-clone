@@ -12,21 +12,21 @@ export default async function Home() {
     <main>
       <CarouselBannerWrapper />
 
-    <div>
-      <MoviesCarousel 
-      movies={upcomingMovies || []} 
-      title ={'Upcoming Movies'} 
-      />
-      <MoviesCarousel 
-      movies={topRatedMovies} 
-      title ={'Top Rated Movies'} 
-      />
-      <MoviesCarousel 
-      movies={popularMovies} 
-      title ={'Popular Movies'} 
-      />
+      <div>
+        <MoviesCarousel
+          movies={upcomingMovies || []}
+          title={'Upcoming Movies'}
+        />
+        <MoviesCarousel
+          movies={topRatedMovies}
+          title={'Top Rated Movies'}
+        />
+        <MoviesCarousel
+          movies={popularMovies}
+          title={'Popular Movies'}
+        />
 
-    </div>
+      </div>
     </main>
   );
 }
